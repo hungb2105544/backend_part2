@@ -34,6 +34,8 @@ exports.findAll = async (req, res, next) => {
       new ApiError(500, "An error occurred while retrieving contacts")
     );
   }
+
+  return res.send(document);
 };
 
 exports.findOne = (req, res) => {
